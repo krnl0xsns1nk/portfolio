@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head', { pageTitle: 'Work', pageDescription: 'Selected projects and case studies — SaaS tools, AI products, and client work.' }) %>
+</head>
+<body>
+
+  <%- include('partials/nav', { activePage: 'projects' }) %>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <p class="hero__eyebrow reveal">Selected Work</p>
+      <h1 class="page-header__title reveal">Projects, built end to end.</h1>
+      <p class="page-header__sub reveal">
+        A collection of SaaS products, AI tools, and client work — each one
+        scoped, built, and shipped with the same level of care.
+      </p>
+    </div>
+  </section>
+
+  <!-- Full Projects Grid -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="projects__grid" id="projectsGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section class="section case-studies" id="case-studies">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__label">Deep Dives</p>
+        <h2 class="section__title">How the work gets done.</h2>
+      </div>
+      <div class="case-list" id="caseList">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-band">
+    <div class="container cta-band__inner reveal">
+      <h2 class="cta-band__title">Have something to build?</h2>
+      <p class="cta-band__sub">I take on a small number of freelance projects each quarter.</p>
+      <a href="/#contact" class="btn btn--primary">Get in Touch</a>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+  <%- include('partials/project-modal') %>
+
+  <script src="/assets/js/projects.js"></script>
+  <script src="/assets/js/animations.js"></script>
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

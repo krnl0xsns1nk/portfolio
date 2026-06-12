@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head', { pageTitle: 'Now', pageDescription: 'What I\'m currently working on and writing about.' }) %>
+</head>
+<body>
+
+  <%- include('partials/nav', { activePage: 'now' }) %>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <p class="hero__eyebrow reveal">Now</p>
+      <h1 class="page-header__title reveal">What I'm doing right now.</h1>
+      <p class="page-header__sub reveal">
+        A snapshot of current projects, priorities, and what I'm thinking
+        about — updated as things change.
+      </p>
+    </div>
+  </section>
+
+  <!-- Status list -->
+  <section class="section">
+    <div class="container">
+      <p class="now-updated reveal">Last updated <%= lastUpdated %></p>
+      <div class="now-list">
+        <div class="now-item reveal">
+          <span class="now-item__label">Building</span>
+          <h3 class="now-item__title">Pixel2Excel</h3>
+          <p class="now-item__text">
+            Refining the AI table extraction pipeline based on feedback from
+            teachers testing it on real grade sheets. Focused on accuracy and
+            handling messy, low-quality scans.
+          </p>
+        </div>
+        <div class="now-item reveal">
+          <span class="now-item__label">Maintaining</span>
+          <h3 class="now-item__title">7asib</h3>
+          <p class="now-item__text">
+            Live and stable. Occasionally shipping small fixes based on
+            student feedback. No major changes planned — it does its job.
+          </p>
+        </div>
+        <div class="now-item reveal">
+          <span class="now-item__label">Available for</span>
+          <h3 class="now-item__title">Freelance projects</h3>
+          <p class="now-item__text">
+            Taking on a small number of client projects — custom web apps,
+            internal tools, and SaaS MVPs. If that's you,
+            <a href="/#contact" style="color: var(--color-accent); text-decoration: underline;">reach out</a>.
+          </p>
+        </div>
+        <div class="now-item reveal">
+          <span class="now-item__label">Learning</span>
+          <h3 class="now-item__title">Prompt architecture for production AI features</h3>
+          <p class="now-item__text">
+            Going deeper on structured prompting and evaluation for AI
+            features that need to be reliable, not just impressive in a demo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent writing -->
+  <% if (posts && posts.length > 0) { %>
+  <section class="section" style="border-top: 1px solid var(--color-border);">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__label">Writing</p>
+        <h2 class="section__title">Recent posts.</h2>
+      </div>
+      <div class="case-list">
+        <% posts.forEach(post => { %>
+          <a href="/posts/<%= post.slug %>" class="case-item reveal" style="display: block; cursor: pointer;">
+            <div class="case-item__header">
+              <div class="case-item__meta">
+                <span class="case-item__index"><%= post.date %></span>
+                <h3 class="case-item__title"><%= post.title %></h3>
+              </div>
+            </div>
+            <% if (post.excerpt) { %>
+              <div class="case-item__body">
+                <div class="case-block">
+                  <p class="case-block__text"><%= post.excerpt %></p>
+                </div>
+              </div>
+            <% } %>
+          </a>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+  <% } %>
+
+  <%- include('partials/footer') %>
+
+  <script src="/assets/js/animations.js"></script>
+  <script src="/assets/js/navigation.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initAnimations();
+    });
+  </script>
+</body>
+</html>

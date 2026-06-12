@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head', { pageTitle: 'Not Found' }) %>
+</head>
+<body>
+
+  <%- include('partials/nav', { activePage: '' }) %>
+
+  <section class="hero" style="min-height: 70vh;">
+    <div class="container hero__content" style="padding-bottom: 0;">
+      <p class="hero__eyebrow reveal">404</p>
+      <h1 class="hero__headline reveal" style="font-size: clamp(40px, 6vw, 64px);">
+        Page not found.
+      </h1>
+      <p class="hero__sub reveal">
+        The page you're looking for doesn't exist or has moved.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="/" class="btn btn--primary">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+
+  <script src="/assets/js/animations.js"></script>
+  <script src="/assets/js/navigation.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => { initAnimations(); });
+  </script>
+</body>
+</html>

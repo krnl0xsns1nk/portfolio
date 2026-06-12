@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head', { pageTitle: post.title, pageDescription: post.excerpt || post.title }) %>
+</head>
+<body>
+
+  <%- include('partials/nav', { activePage: 'now' }) %>
+
+  <article class="article">
+    <div class="container">
+      <a href="/now" class="back-link reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+        Back to Now
+      </a>
+
+      <div class="article__meta reveal">
+        <span class="article__date"><%= post.date %></span>
+        <% if (post.tag) { %>
+          <span class="article__date">·</span>
+          <span class="article__date"><%= post.tag %></span>
+        <% } %>
+      </div>
+
+      <h1 class="article__title reveal"><%= post.title %></h1>
+      
+      <div class="article__body article-content">
+        <%- content %>
+      </div>
+    </div>
+  </article>
+
+  <!-- CTA -->
+  <section class="section cta-band">
+    <div class="container cta-band__inner reveal">
+      <h2 class="cta-band__title">Have something to build?</h2>
+      <p class="cta-band__sub">I take on a small number of freelance projects each quarter.</p>
+      <a href="/#contact" class="btn btn--primary">Get in Touch</a>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+
+  <script src="/assets/js/animations.js"></script>
+  <script src="/assets/js/navigation.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    initAnimations();
+    });
+  </script>
+</body>
+</html>

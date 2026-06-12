@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head', { pageTitle: 'Home', pageDescription: 'Freelance developer and SaaS founder building product-grade software.' }) %>
+</head>
+<body>
+
+  <%- include('partials/nav', { activePage: 'home' }) %>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <p class="hero__eyebrow reveal">Freelance Developer & SaaS Founder</p>
+      <h1 class="hero__headline reveal">
+        I build software<br/>that solves real<br/>problems.
+      </h1>
+      <p class="hero__sub reveal">
+        Focused on product-grade SaaS tools and AI applications.<br/>
+        Available for select freelance engagements.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="/projects" class="btn btn--primary">View Work</a>
+        <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator" aria-hidden="true">
+      <span class="scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__label">Selected Work</p>
+        <h2 class="section__title">Projects that ship.</h2>
+      </div>
+      <div class="projects__grid" id="projectsGrid">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="projects__more reveal">
+        <a href="/projects" class="btn btn--ghost">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section class="section case-studies" id="case-studies">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__label">Deep Dives</p>
+        <h2 class="section__title">How the work gets done.</h2>
+      </div>
+      <div class="case-list" id="caseList">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about" id="about">
+    <div class="container about__inner">
+      <div class="about__text reveal">
+        <p class="section__label">About</p>
+        <h2 class="about__title">Builder by default.</h2>
+        <p class="about__body">
+          I'm a full-stack developer with a product mindset. I don't just build what's asked — I ask what should be built, and why it matters.
+        </p>
+        <p class="about__body">
+          My focus is on SaaS tools and AI-augmented workflows that solve specific, painful problems. Every project I take on gets the same level of attention: clean architecture, considered UX, and a working product at the end.
+        </p>
+        <p class="about__body">
+          Currently building in public while taking on a small number of freelance clients. If you're working on something real, let's talk.
+        </p>
+        <div class="about__tags">
+          <span class="tag">SaaS Architecture</span>
+          <span class="tag">AI Integration</span>
+          <span class="tag">Full-Stack</span>
+          <span class="tag">Product Strategy</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Node.js</span>
+        </div>
+        <div class="about__more">
+          <a href="/about" class="project-card__cta">
+            More about me
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="about__aside reveal">
+        <div class="about__stat-card">
+          <div class="about__stat">
+            <span class="stat__number">1+</span>
+            <span class="stat__label">Years building software</span>
+          </div>
+          <div class="about__stat">
+            <span class="stat__number">3+</span>
+            <span class="stat__label">Products shipped</span>
+          </div>
+          <div class="about__stat">
+            <span class="stat__number">1</span>
+            <span class="stat__label">SaaS tools in production</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact">
+    <div class="container contact__inner">
+      <div class="reveal">
+        <p class="section__label">Contact</p>
+        <h2 class="contact__title">Let's build something.</h2>
+        <p class="contact__sub">
+          I'm open to freelance projects and early-stage SaaS collaborations.<br/>
+          Reach out directly — I respond within 24 hours.
+        </p>
+        <a href="mailto:alex@alexmercer.dev" class="contact__email">
+          krnl0xsns1nk@gmail.com
+          <svg class="contact__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <div class="contact__links">
+          <a href="https://github.com/krnl0xsns1nk" class="contact__social">GitHub</a>
+          <a href="#" class="contact__social">LinkedIn</a>
+          <a href="#" class="contact__social">X / Twitter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+  <%- include('partials/project-modal') %>
+
+  <script src="/assets/js/projects.js"></script>
+  <script src="/assets/js/animations.js"></script>
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

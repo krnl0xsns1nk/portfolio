@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head', {
+    pageTitle: 'Posts',
+    pageDescription: 'Ideas, notes, experiments and project updates.'
+  }) %>
+</head>
+<body>
+
+  <%- include('partials/nav', { activePage: 'posts' }) %>
+
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-header__title reveal">
+        Posts
+      </h1>
+
+      <p class="page-header__sub reveal reveal-delay-1">
+        Thoughts on building products, programming, SaaS,
+        mistakes, lessons learned, and whatever I'm working on.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <% if (!posts || posts.length === 0) { %>
+
+        <div class="now-list reveal">
+          <div class="now-item">
+            <div class="now-item__label">Nothing yet</div>
+            <h2 class="now-item__title">
+              No posts published
+            </h2>
+            <p class="now-item__text">
+              Check back later.
+            </p>
+          </div>
+        </div>
+
+      <% } else { %>
+
+        <div class="now-list">
+
+          <% posts.forEach((post, index) => { %>
+
+            <article
+              class="now-item reveal"
+              style="--i:<%= index %>"
+            >
+
+              <div class="now-item__label">
+                <%= post.date %>
+              </div>
+
+              <h2 class="now-item__title">
+                <a href="/posts/<%= post.slug %>">
+                  <%= post.title %>
+                </a>
+              </h2>
+
+              <% if (post.excerpt) { %>
+                <p class="now-item__text">
+                  <%= post.excerpt %>
+                </p>
+              <% } %>
+
+              <div style="margin-top:12px;">
+                <a
+                  href="/posts/<%= post.slug %>"
+                  class="btn btn--ghost btn--small"
+                >
+                  Read Post
+                </a>
+              </div>
+
+            </article>
+
+          <% }) %>
+
+        </div>
+
+      <% } %>
+
+    </div>
+  </section>
+
+  <section class="section cta-band">
+    <div class="container cta-band__inner reveal">
+      <h2 class="cta-band__title">
+        Want to connect?
+      </h2>
+
+      <p class="cta-band__sub">
+        I'm always interested in talking about products,
+        programming and interesting ideas.
+      </p>
+
+      <a href="/#contact" class="btn btn--primary">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+
+  <script src="/assets/js/animations.js"></script>
+  <script src="/assets/js/navigation.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initAnimations();
+    });
+  </script>
+
+</body>
+</html>

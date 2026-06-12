@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head', { pageTitle: 'About', pageDescription: 'Full-stack developer focused on SaaS products, AI tools, and solving real problems.' }) %>
+</head>
+<body>
+
+  <%- include('partials/nav', { activePage: 'about' }) %>
+
+  <!-- Intro -->
+  <section class="about-page__intro">
+    <div class="container">
+      <p class="hero__eyebrow reveal">About</p>
+      <p class="about-page__lead reveal">
+        I'm a full-stack developer with a product mindset — I don't just build
+        what's asked, I ask what should be built, and why it matters.
+      </p>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <section class="section about-page">
+    <div class="container about__inner">
+      <div class="about__text reveal">
+        <p class="about__body">
+          My focus is on SaaS tools and AI-augmented workflows that solve
+          specific, painful problems. I care more about whether something
+          actually gets used than how many features it has.
+        </p>
+        <p class="about__body">
+          Most of my work falls into one of two buckets: products I build for
+          myself because I have the problem firsthand, and freelance projects
+          where a client needs something custom-built rather than
+          stitched together from templates.
+        </p>
+        <p class="about__body">
+          Every project gets the same level of attention regardless of size —
+          clean architecture, considered UX, and a working product at the end.
+          No half-finished demos.
+        </p>
+        <p class="about__body">
+          Currently building in public while taking on a small number of
+          freelance clients. If you're working on something real, let's talk.
+        </p>
+
+        <div class="about__tags">
+          <span class="tag">SaaS Architecture</span>
+          <span class="tag">AI Integration</span>
+          <span class="tag">Full-Stack</span>
+          <span class="tag">Product Strategy</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="about__aside reveal">
+        <div class="about__stat-card">
+          <div class="about__stat">
+            <span class="stat__number">1+</span>
+            <span class="stat__label">Years building software</span>
+          </div>
+          <div class="about__stat">
+            <span class="stat__number">3+</span>
+            <span class="stat__label">Products shipped</span>
+          </div>
+          <div class="about__stat">
+            <span class="stat__number">1</span>
+            <span class="stat__label">SaaS tools in production</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How I work -->
+  <section class="section how-i-work">
+    <div class="container">
+      <div class="section__header reveal">
+        <p class="section__label">Approach</p>
+        <h2 class="section__title">How I work.</h2>
+      </div>
+      <div class="case-list">
+        <div class="case-item reveal">
+          <div class="case-item__header">
+            <div class="case-item__meta">
+              <span class="case-item__index">01</span>
+              <h3 class="case-item__title">Scope tight, ship fast</h3>
+            </div>
+          </div>
+          <div class="case-item__body">
+            <div class="case-block">
+              <p class="case-block__text">
+                I'd rather ship a focused v1 in two weeks than spend two
+                months building something nobody's used yet. Real feedback
+                beats imagined requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="case-item reveal">
+          <div class="case-item__header">
+            <div class="case-item__meta">
+              <span class="case-item__index">02</span>
+              <h3 class="case-item__title">Clear communication</h3>
+            </div>
+          </div>
+          <div class="case-item__body">
+            <div class="case-block">
+              <p class="case-block__text">
+                For client work, that means regular updates, honest timelines,
+                and flagging problems early — not after they've become
+                expensive.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="case-item reveal">
+          <div class="case-item__header">
+            <div class="case-item__meta">
+              <span class="case-item__index">03</span>
+              <h3 class="case-item__title">Built to last</h3>
+            </div>
+          </div>
+          <div class="case-item__body">
+            <div class="case-block">
+              <p class="case-block__text">
+                Fast doesn't mean sloppy. Clean code, sensible architecture,
+                and documentation that means the next person (or future me)
+                isn't lost.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-band">
+    <div class="container cta-band__inner reveal">
+      <h2 class="cta-band__title">Want to work together?</h2>
+      <p class="cta-band__sub">I'm open to freelance projects and early-stage SaaS collaborations.</p>
+      <a href="/#contact" class="btn btn--primary">Get in Touch</a>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+
+  <script src="/assets/js/animations.js"></script>
+  <script src="/assets/js/navigation.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initAnimations();
+    });
+  </script>
+</body>
+</html>

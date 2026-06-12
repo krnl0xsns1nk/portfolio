@@ -1,0 +1,19 @@
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo">krnl0xsns1nk</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="/projects" class="nav__link <%= activePage === 'projects' ? 'active' : '' %>">Work</a></li>
+
+      <li><a href="/about" class="nav__link <%= activePage === 'about' ? 'active' : '' %>">About</a></li>
+
+      <li><a href="/posts" class="nav__link <%= activePage === 'posts' ? 'active' : '' %>">Posts</a></li>
+
+      <li><a href="/now" class="nav__link <%= activePage === 'now' ? 'active' : '' %>">Now</a></li>
+      
+      <li><a href="/#contact" class="nav__link btn btn--ghost">Contact</a></li>
+    </ul>
+  </div>
+</nav>
