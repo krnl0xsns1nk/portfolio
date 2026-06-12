@@ -11,13 +11,6 @@
   "keywords": [],
   "author": "krnl0xsns1nk",
   "license": "MIT",
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^11.5.1",
-      "onFail": "download"
-    }
-  },
   "type": "module",
   "dependencies": {
     "ejs": "^6.0.1",
