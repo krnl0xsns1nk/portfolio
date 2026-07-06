@@ -23,6 +23,25 @@ const PROJECTS = [
       github: 'https://github.com/krnl0xsns1nk/pixel2excel'
     }
   },
+  {
+    id: '7asib-app',
+    tag: 'Mobile app',
+    title: '7asib app',
+    problem: 'i was working on chat project so i needed to learn mobile dev to create an app',
+    solution: "i created an app as my first app turning my old website to an mobile app (Android right now)",
+    outcome: "first step to learn mobile dev, i am now able to create apps using my skills on reactjs but jut a bit if changes",
+    features: [
+      'a copy of 7asib.vercel.app but without animation',
+      'offline mode, dont need to internet connection',
+      'Ad-free experience',
+    ],
+    stack: ["React Native", "Expo", "TypeScript", "Android"],
+    status: "Live",
+    result: "built to understand a new programming world",
+    links: {
+      github: "https://github.com/krnl0xsns1nk/7asib-app",
+    },
+  },
 
   {
     id: '7asib',
@@ -34,11 +53,11 @@ const PROJECTS = [
     features: [
       'Moroccan-French grading system support',
       'Mobile-first design',
-      'Progressive Web App (PWA)',
+      'Android app available',
       'Fast and simple calculations',
       'Ad-free experience'
     ],
-    stack: ['Next.js', 'TypeScript', 'Next-PWA'],
+    stack: ['Next.js', 'TypeScript'],
     status: 'Live',
     result: 'Built to solve a personal problem and continues to serve students looking for a simple grading tool.',
     links: {
